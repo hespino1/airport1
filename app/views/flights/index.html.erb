@@ -1,0 +1,50 @@
+
+<div class="container-fluid" align="center">
+<h1>Flights Controller</h1>
+
+<div class="row">
+  <div class="col-md-6" align="center">
+  	<h2>Arrivals</h2>
+  	<table class="table table-hover">
+   <caption></caption>
+   <thead>
+      <tr>
+         <th>Flight</th>
+         <th>Date</th>
+         <th>Status</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr><% @departures.each do |departure| %>
+         <td><%= departure.flight.number %></td>
+         <td><%= departure.date %></td>
+         <td><%= departure.status %></td>
+      </tr>
+      <% end %>
+   </tbody>
+</table>
+  </div>
+
+  <div class="col-md-6" align="center">
+  <h2>Departures</h2>
+  <table class="table table-hover">
+   <caption></caption>
+   <thead>
+      <tr>
+         <th>Flight</th>
+         <th>Date</th>
+         <th>Status</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr><% @arrivals.each do |arrival| %>
+         <td><%= arrival.flight.number %></td>
+         <td><%= arrival.date %></td>
+         <td><%= arrival.status %></td>
+      </tr>
+      <% end %>
+   </tbody>
+</table>
+  </div>
+</div>
+</div>
